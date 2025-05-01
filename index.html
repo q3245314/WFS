@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>任务领取系统</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 contenteditable="true" id="systemTitle">任务领取系统</h1>
+
+    <div class="settings-panel">
+      <div class="button-container">
+        <button id="toggleSettings" class="settings-btn">功能菜单</button>
+        <button id="saveTasksBtn" class="settings-btn">保存修改</button>
+      </div>
+      <div id="settingsForm" class="hidden">
+        <div class="settings-row">
+          <label for="taskCount">设置任务数量:</label>
+          <input type="number" id="taskCount" min="1" max="300" value="2">
+        </div>
+        <div class="settings-row">
+          <label for="progressCount">设置进度数量:</label>
+          <input type="number" id="progressCount" min="1" max="10" value="4">
+        </div>
+        <button id="applySettings" class="settings-btn">重置任务</button>
+        <button id="addTasks" class="settings-btn">增加任务</button>
+      </div>
+    </div>
+
+    <div class="task-container" id="taskContainer"></div>
+  </div>
+
+  <script>
+    let tasks = [];
+    let systemTitle = "任务领取系统";
+
+    // 缓存常用 DOM 元素
+    const dom = {
+      taskContainer: document.getElementById('taskContainer'),
+      taskCount: document.getElementById('taskCount'),
+      progressCount: document.getElementById('progressCount'),
+      settingsForm: document.getElementById('settingsForm'),
+      toggleSettingsBtn: document.getElementById('toggleSettings'),
+      saveTasksBtn: document.getElementById('saveTasksBtn'),
+      applySettings: document.getElementById('applySettings'),
+      addTasks: document.getElementById('addTasks'),
+      systemTitle: document.getElementById('systemTitle')
+    };
+
+
+    let currentVersion = 1; // 乐观锁版本号
+    async function loadTasks() {
+      try {
+        const res = await fetch('load.php');
+        const data = await res.json();
+        tasks = data.tasks || [];
+        systemTitle = data.systemTitle || "任务领取系统";
+        currentVersion = data.version || 1;
+      } catch (error) {
+        console.error('加载任务失败:', error);
+        tasks = [];
+        systemTitle = "任务领取系统";
+        currentVersion = 1;
+      } finally {
+        dom.systemTitle.textContent = systemTitle;
+        document.title = systemTitle;
+        renderTasks();
+      }
+    }
+
+    async function saveTasks() {
+      try {
+        systemTitle = dom.systemTitle.textContent.trim();
+        document.title = systemTitle;
+        const response = await fetch('save.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            version: currentVersion,
+            tasks,
+            systemTitle
+          })
+        });
+        const result = await response.json();
+
+        if (response.status === 409) {
+          alert(result.message);
+          // 重新加载数据
+          await loadTasks();
+          return false;
+        }
+
+        if (result.status === 'ok') {
+          currentVersion = result.newVersion;
+          return true;
+        } else {
+          // 处理其他错误情况，例如服务器返回错误信息但不是版本冲突
+          alert(result.message || '保存失败，请重试');
+          return false;
+        }
+      } catch (error) {
+        console.error('保存任务失败:', error);
+        alert('网络错误，保存失败，请重试');
+        return false;
+      }
+    }
+
+
+    function checkPassword() {
+      return new Promise((resolve) => {
+        const modal = document.createElement('div');
+        modal.classList.add('modal');  // 添加 modal 类
+
+        const content = document.createElement('div');
+        content.classList.add('modal-content');  // 添加 modal-content 类
+
+        const title = document.createElement('h3');
+        title.textContent = '重要数据被修改，需要密码验证';
+        title.classList.add('modal-title');  // 添加 modal-title 类
+
+        const input = document.createElement('input');
+        input.type = 'password';
+        input.classList.add('modal-input');  // 添加 modal-input 类
+
+        const confirmButton = document.createElement('button');
+        confirmButton.textContent = '确认';
+        confirmButton.classList.add('modal-button');
+
+        const cancelButton = document.createElement('button');
+        cancelButton.textContent = '取消';
+        cancelButton.classList.add('modal-button');
+
+        // 创建一个按钮容器
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('modal-buttons');
+        buttonsContainer.append(confirmButton, cancelButton);
+
+        // 确认按钮事件
+        confirmButton.onclick = () => {
+          document.body.removeChild(modal);
+          if (input.value !== '3') {
+            alert('密码错误！');
+            resolve(false);
+          } else {
+            resolve(true);
+          }
+        };
+        // 取消按钮事件
+        cancelButton.onclick = () => {
+          document.body.removeChild(modal);
+          resolve(false);
+        };
+
+        content.append(title, input, buttonsContainer);
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+        input.focus();
+      });
+    }
+
+
+
+    function getTaskInputValues() {
+      return {
+        taskCount: parseInt(dom.taskCount.value, 10),
+        progressCount: parseInt(dom.progressCount.value, 10)
+      };
+    }
+
+    function createTasks(taskCount, progressCount, reset = false) {
+      const newTasks = [];
+      const lastIndex = reset ? 0 : (tasks.length ? parseInt(tasks[tasks.length - 1].name.match(/\d+/)?.[0] || 0) : 0);
+
+      for (let i = 1; i <= taskCount; i++) {
+        const progresses = Array.from({ length: progressCount }, (_, j) => ({
+          name: `${j + 1}校`,
+          completed: false,
+          assignee: ""
+        }));
+        newTasks.push({ name: `${lastIndex + i}：`, progresses });
+      }
+
+      return newTasks;
+    }
+
+    function updateToggleLabel(label, progress) {
+      if (!progress.assignee) {
+        label.textContent = '待领取';
+        label.style.color = '#3498db';
+      } else if (progress.completed) {
+        label.textContent = '已完成';
+        label.style.color = '#28a745';
+      } else {
+        label.textContent = '进行中';
+        label.style.color = '#ffc107';
+      }
+    }
+
+    function renderTasks() {
+      dom.taskContainer.innerHTML = '';
+
+      tasks.forEach((task, taskIndex) => {
+        const taskSection = document.createElement('div');
+        taskSection.className = 'task-section';
+
+        const taskTitleWrapper = document.createElement('div');
+        taskTitleWrapper.className = 'task-title-wrapper';
+        taskTitleWrapper.style.display = 'flex';
+        taskTitleWrapper.style.justifyContent = 'space-between';
+        taskTitleWrapper.style.alignItems = 'center';
+
+        const taskTitle = document.createElement('div');
+        taskTitle.className = 'task-title';
+        taskTitle.contentEditable = true;
+        taskTitle.textContent = task.name;
+        taskTitle.style.flex = '1';
+        taskTitle.addEventListener('blur', () => {
+          tasks[taskIndex].name = taskTitle.textContent.trim();
+        });
+
+        // 创建排序输入框
+        const positionInput = document.createElement('input');
+        positionInput.type = 'number';
+        positionInput.min = '1';
+        positionInput.max = tasks.length;
+        positionInput.value = taskIndex + 1;
+        positionInput.style = 'width: 20%; height: 30px; margin-left: 10px; text-align: center; max-width: 70px;';
+
+
+        positionInput.addEventListener('change', () => {
+          const newPosition = parseInt(positionInput.value) - 1;
+          if (newPosition >= 0 && newPosition < tasks.length) {
+            // 移动任务到新位置
+            const [movedTask] = tasks.splice(taskIndex, 1);
+            tasks.splice(newPosition, 0, movedTask);
+            renderTasks();
+          } else {
+            // 恢复原来的值
+            positionInput.value = taskIndex + 1;
+          }
+        });
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.title = '删除该任务';
+        deleteBtn.style = 'cursor:pointer; border:none; background:transparent; font-size:16px;';
+        deleteBtn.textContent = '🗑️';
+        deleteBtn.addEventListener('click', async () => {
+
+          if (!await checkPassword()) return;
+          tasks.splice(taskIndex, 1);
+          renderTasks();
+        });
+
+
+        taskTitleWrapper.append(taskTitle, positionInput, deleteBtn);
+        taskSection.appendChild(taskTitleWrapper);
+
+        const progressList = document.createElement('div');
+        progressList.className = 'progress-list';
+
+        task.progresses.forEach((progress, progressIndex) => {
+          if (progressIndex > 0) {
+            const connector = document.createElement('div');
+            connector.className = 'progress-connector';
+            progressList.appendChild(connector);
+          }
+
+          const progressItem = document.createElement('div');
+          progressItem.className = `progress-item ${progress.completed ? 'completed' : 'pending'}`;
+
+          const progressInfo = document.createElement('div');
+          progressInfo.className = 'progress-info';
+
+          const statusIndicator = document.createElement('div');
+          statusIndicator.className = `status-indicator ${progress.completed ? 'status-completed' : (progress.assignee ? 'status-pending' : 'status-pending-wait')}`;
+
+          const progressName = document.createElement('div');
+          progressName.className = 'progress-name';
+          progressName.textContent = progress.name;
+
+          const statusToggle = document.createElement('div');
+          statusToggle.className = 'status-toggle';
+
+          const toggleLabel = document.createElement('span');
+          toggleLabel.className = 'toggle-label';
+          updateToggleLabel(toggleLabel, progress);
+
+          const toggleSwitch = document.createElement('label');
+          toggleSwitch.className = 'toggle-switch';
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.checked = progress.completed;
+          checkbox.onchange = () => {
+            if (!progress.assignee) {
+              alert("请等待上一级进度完成后，并填写姓名");
+              checkbox.checked = false;
+              return;
+            }
+            if (checkbox.checked && progressIndex > 0 && !task.progresses[progressIndex - 1].completed) {
+              alert("上一进度未完成！");
+              checkbox.checked = false;
+              return;
+            }
+            progress.completed = checkbox.checked;
+            renderTasks();
+          };
+
+          const slider = document.createElement('span');
+          slider.className = 'slider';
+          toggleSwitch.append(checkbox, slider);
+
+          statusToggle.append(toggleLabel, toggleSwitch);
+          progressInfo.append(statusIndicator, progressName, statusToggle);
+
+          const assigneeEditor = document.createElement('div');
+          assigneeEditor.className = 'assignee-editor';
+
+          const canEdit = !progress.completed && (progressIndex === 0 || task progresses[progressIndex - 1].completed);
+          assigneeEditor.contentEditable = canEdit;
+          assigneeEditor.textContent = progress.assignee;
+          assigneeEditor.style border = canEdit && !progress.assignee ? '1px solid #999' : 'none';
+
+          assigneeEditor.addEventListener('blur', function () {
+            const newName = this.textContent.trim();
+            progress.受让人 = 新名称;
+            更新切换标签（切换标签，进度）；
+            renderTasks(); // 直接刷新状态
+          });
+
+          progressInfo.appendChild(assigneeEditor);
+          progressItem.appendChild(progressInfo);
+          progressList.appendChild(progressItem);
+        });
+
+        taskSection.appendChild(progressList);
+        dom.taskContainer.appendChild(taskSection);
+      });
+    }
+
+    // 事件绑定
+    dom.toggleSettingsBtn.addEventListener('click', () => {
+      dom.settingsForm.classList.toggle('hidden');
+      dom.toggleSettingsBtn.textContent = dom.settingsForm.classList.contains('hidden') ? '功能菜单' : '折叠菜单';
+    });
+
+    dom.applySettings.addEventListener('click', async () => {
+
+      if (!await checkPassword()) return;
+      const { taskCount, progressCount } = getTaskInputValues();
+      tasks = createTasks(taskCount, progressCount, true);
+      渲染任务();
+      dom.settingsForm.classList.add('hidden');
+      dom.toggleSettingsBtn.textContent = '功能菜单';
+    });
+
+
+    dom.addTasks.addEventListener('click', async () => {
+
+      if (!await checkPassword()) return;
+      const { taskCount, progressCount } = getTaskInputValues();
+      tasks.push(...createTasks(taskCount, progressCount));
+      渲染任务();
+    });
+
+
+    dom.saveTasksBtn.addEventListener('click', async () => {
+      const isConfirmed = confirm("您确定要保存所有修改吗？");
+      if (isConfirmed) {
+        const saved = await saveTasks();
+        if (保存) {
+          alert('保存成功！');
+        }
+      }
+    });
+
+    加载任务();
+  </script>
+
+
+</html>
