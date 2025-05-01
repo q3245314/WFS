@@ -1,0 +1,1031 @@
+{
+    "version": 21,
+    "tasks": [
+        {
+            "name": "净土信愿",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "张艳巍"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": "赵亚利"
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-44",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": "张艳巍"
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-46",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-47",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-48",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-49",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-50",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": "于洋"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-51",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "净土十要2018-52",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "9生死心切-01",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "王丽波"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "9生死心切-02",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝修第九-01",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝修第九-02",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝修第九-03",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "于洋"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝修第九-04",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝修第九-05",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "李亮"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝修第九-05",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "18：宝王三昧念佛直指劝修第九-06",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝戒杀第十-01",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧念佛直指劝戒杀第十-02",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧2017-01",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝王三昧2017-02",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师110",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师111",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师112",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师113",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师114",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师114",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师117",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "赵亚利"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "沈桂兰"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师126",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "李亮"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师127",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": "李亮"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师128",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "王文娟"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师129",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "王文娟"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师130",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "王文娟"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师131",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "王丽波"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "宝志公禅师132",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "王丽波"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "彻悟禅师语录第1集",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "岳罗曼"
+                },
+                {
+                    "name": "2校",
+                    "completed": true,
+                    "assignee": "潘绍艳"
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "彻悟禅师语录第3集",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": "肖丹"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "彻悟禅师语录第4集",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": "贾春红"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "彻悟禅师语录第5集",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": true,
+                    "assignee": "单立莉"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        },
+        {
+            "name": "彻悟禅师语录第6集",
+            "progresses": [
+                {
+                    "name": "1校",
+                    "completed": false,
+                    "assignee": "罗玉新"
+                },
+                {
+                    "name": "2校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "3校",
+                    "completed": false,
+                    "assignee": ""
+                },
+                {
+                    "name": "4校",
+                    "completed": false,
+                    "assignee": ""
+                }
+            ]
+        }
+    ],
+    "systemTitle": "WFS校验任务领取系统"
+}
